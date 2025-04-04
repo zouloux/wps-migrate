@@ -1,0 +1,15 @@
+{
+	"name": "zouloux/wps-migrate",
+	"description": "Simplest data migration",
+	"type": "wordpress-muplugin",
+	"license": "MIT",
+	"version" : "1.0.0",
+	"authors": [
+		{
+			"name": "Alexis Bouhet"
+		}
+	],
+	"require": {
+		"php": "^8.3"
+	}
+}
