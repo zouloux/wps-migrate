@@ -91,11 +91,15 @@ function wps_migrate_admin_page () {
 
 add_action('init', function () {
 	if ( !is_admin() ) return;
-	if ( !current_user_can('manage_options') )
-		wp_die('You are not allowed to manage migrations.');
+	$checkMigration = function () {
+		if ( !current_user_can('manage_options') )
+			wp_die('You are not allowed to manage migrations.');
+	};
 	if ( isset($_GET["action"]) && $_GET["action"] === "wps_migrate_download_data_file" ) {
+		$checkMigration();
 		wps_migrate_download_handler();
 	} else if ( isset($_POST["wps-migrate-post"]) && !empty($_FILES["wps-migrate-archive"]["tmp_name"]) ) {
+		$checkMigration();
 		wps_migrate_upload_data();
 	}
 });

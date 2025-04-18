@@ -3,7 +3,7 @@
 	"description": "Simplest data migration",
 	"type": "wordpress-muplugin",
 	"license": "MIT",
-	"version" : "1.0.0",
+	"version" : "1.0.1",
 	"authors": [
 		{
 			"name": "Alexis Bouhet"
